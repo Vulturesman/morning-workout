@@ -36,19 +36,29 @@ nav a {
     text-decoration: underline;
 }
 
-
-
 /* added for animation */
-nav a:after {
-    width: 100%;
-    position: absolute;
-    transform: scaleX(0);
+
+.hover-underline-animation {
+    display: inline-block;
+    position: relative;
 }
 
-nav a:hover {
-    text-decoration: underline;
+.hover-underline-animation:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    background-color: crimson;
+    transform-origin: bottom right;
+    transition: transform 0.35s ease-out;
+}
+
+.hover-underline-animation:hover:after {
     transform: scaleX(1);
-    transform-origin: left;
+    transform-origin: bottom left;
 }
 
 /* added for animation */
