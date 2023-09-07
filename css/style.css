@@ -1,7 +1,23 @@
 nav a {
     color: crimson;
     text-decoration: none;
+    display: inline-block
+        /* added for animation */
 }
+
+nav a:after {
+    width: 100%;
+    position: absolute;
+    transform: scaleX(0);
+}
+
+nav a:hover {
+    text-decoration: underline;
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+/* added for animation */
 
 .about blockquote {
     background-color: #eaeaea;
